@@ -32,9 +32,9 @@ final class SubString implements TransformerInterface
             throw new TransformerException(
                 $this->getName(),
                 sprintf(
-                    'Missing or invalid "start" configuration (must be an integer) for %s transformer.', 
+                    'Missing or invalid "start" configuration (must be an integer) for %s transformer.',
                     $this->getKey()
-                    )
+                )
             );
         }
 
@@ -42,9 +42,9 @@ final class SubString implements TransformerInterface
             throw new TransformerException(
                 $this->getName(),
                 sprintf(
-                    'Missing or invalid "length" configuration (must be an integer) for %s transformer.', 
+                    'Missing or invalid "length" configuration (must be an integer) for %s transformer.',
                     $this->getKey()
-                    )
+                )
             );
         }
 
@@ -57,6 +57,7 @@ final class SubString implements TransformerInterface
             if (!is_string($data)) {
                 $originalType = $val->getType();
                 $results[] = new AdvancedValue($originalType, $data);
+
                 continue;
             }
 

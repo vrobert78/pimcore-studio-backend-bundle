@@ -31,9 +31,9 @@ final class Explode implements TransformerInterface
             throw new TransformerException(
                 $this->getName(),
                 sprintf(
-                    'Missing or invalid "delimiter" configuration for %s transformer.', 
+                    'Missing or invalid "delimiter" configuration for %s transformer.',
                     $this->getKey()
-                    )
+                )
             );
         }
 
@@ -45,6 +45,7 @@ final class Explode implements TransformerInterface
             if (!is_string($data)) {
                 $originalType = $val->getType();
                 $results[] = new AdvancedValue($originalType, $data);
+
                 continue;
             }
 
